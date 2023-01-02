@@ -34,7 +34,7 @@ So, for example you could run:
 Create signed package:
 ======================
 
-If you have never generated an RSA key before, please follow these steps to make a new one. Start in the sbin folder (usually: /share/MD0_DATA/.qpkg/DSv3/usr/sbin]):
+If you have never generated an RSA key before, please follow these steps to make a new one. Start in the sbin folder (usually: /share/MD0_DATA/.qpkg/DSv3/usr/sbin):
 
 1. Generate private rsa key:
 /usr/bin/openssl genrsa -out private.pem 1024
