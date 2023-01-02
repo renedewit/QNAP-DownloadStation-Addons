@@ -45,6 +45,6 @@ If you have never generated an RSA key before, please follow these steps to make
 Both keys should be present in the sbin folder (check with: ls -al command).
 
 3.And next, use ds-addon-pack.sh and RSA key to compress add-ons and make a signature:
-./ds-addon-pack.sh private.pem public.pem addons/<torrent foldername>/ 
+./ds-addon-pack.sh private.pem public.pem addons/<torrent foldername>
 
 This will generate a package "<torrent foldername><version-timestamp>.addon" in the sbin folder.
