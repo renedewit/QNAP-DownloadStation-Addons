@@ -1,0 +1,21 @@
+{
+    "author": "QNAP Systems, Inc.",
+    "website": "http://www.qnap.com",
+    "name": "ThePirateBay",
+    "addon": "thepiratebay.se.php",
+    "class": "thepiratebay",
+    "hosts": [
+        "thepiratebay.org"
+    ],
+    "domain": "thepiratebay.se",
+    "version": 200,
+    "interface": [
+        "ISearch"
+    ],
+    "qpkg_dependencies": {
+        "DownloadStation": "5.0.0"
+    },
+    "description": {
+        "ENG": "The world's most resilient BitTorrent site"
+    }
+}

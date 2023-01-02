@@ -1,0 +1,21 @@
+{
+    "author": "QNAP Systems, Inc.",
+    "website": "http://www.qnap.com",
+    "name": "Demonoid",
+    "addon": "demonoid.pw.php",
+    "class": "demonoid",
+    "hosts": [
+        "demonoid.pw"
+    ],
+    "domain": "demonoid.pw",
+    "version": 200,
+    "interface": [
+        "ISearch"
+    ],
+    "qpkg_dependencies": {
+        "DownloadStation": "5.0.0"
+    },
+    "description": {
+        "ENG": "Demonoid is a website and BitTorrent tracker"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "author": "Adam Jakab",
+    "website": "http://jakab.pro",
+    "name": "1337x",
+    "addon": "1337x.to.php",
+    "class": "class1337x",
+    "hosts": [
+        "1337x.to"
+    ],
+    "domain": "1337x.to",
+    "version": 200,
+    "interface": [
+        "ISearch"
+    ],
+    "qpkg_dependencies": {
+        "DownloadStation": "5.0.0"
+    },
+    "description": {
+        "ENG": "A good torrent search site"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "author": "QNAP Systems, Inc.",
+    "website": "http://www.qnap.com",
+    "name": "Kickass",
+    "addon": "kickass.to.php",
+    "class": "kickass",
+    "hosts": [
+        "kat.how"
+    ],
+    "domain": "kickass.to",
+    "version": 200,
+    "interface": [
+        "ISearch"
+    ],
+    "qpkg_dependencies": {
+        "DownloadStation": "5.0.0"
+    },
+    "description": {
+        "ENG": "kickass torrent sharing site"
+    }
+}

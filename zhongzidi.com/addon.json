@@ -1,0 +1,44 @@
+{
+    "author": "ZHU HAIHUA",
+    "website": "https://github.com/kimiazhu",
+    "name": "zhongzidi.com",
+    "addon": "zhongzidi.com.php",
+    "class": "zhongzidi",
+    "hosts": [
+        "zhongzidi.com"
+    ],
+    "domain": "zhongzidi.com",
+    "version": 100,
+    "interface": [
+        "ISearch"
+    ],
+    "qpkg_dependencies": {
+        "DownloadStation": "5.0.1"
+    },
+    "description": {
+        "CZE": "",
+        "DAN": "",
+        "DUT": "",
+        "ENG": "zhongzidi.com torrent search provider.",
+        "ESM": "",
+        "FIN": "",
+        "FRE": "",
+        "GER": "",
+        "GRK": "",
+        "HUN": "",
+        "ITA": "",
+        "JPN": "",
+        "KOR": "",
+        "NOR": "",
+        "POL": "",
+        "POR": "",
+        "ROM": "",
+        "RUS": "",
+        "SCH": "",
+        "SPA": "",
+        "SWE": "",
+        "TCH": "",
+        "THA": "",
+        "TUR": ""
+    }
+}
