@@ -15,7 +15,7 @@ https://github.com/dokkis/qnap-torrent-providers/releases
 Manual installation:
 ====================
 1. Manually upload the content of the "addons" folders to the corresponding folder on your NAS. Example command:
-cp /share/MD0_DATA/Public/<torrent foldername>/* /share/MD0_DATA/.qpkg/DSv3/usr/sbin/addons/<torrent foldername>/
+cp /share/MD0_DATA/Public/[torrent foldername]/* /share/MD0_DATA/.qpkg/DSv3/usr/sbin/addons/[torrent foldername]/
 
 2. Open your Download Station app on your NAS, go to Settings, and click the refresh button in the "Add-ons" tab. It will load the newly uploaded add-ons.
 
@@ -29,7 +29,7 @@ You can run these addons from your terminal from your NAS. Follow the addon deve
 
 So, for example you could run:
 
-./ds-addon -s 1337x.to <search string> 2
+./ds-addon -s 1337x.to [search string] 2
 
 Create signed package:
 ======================
@@ -45,6 +45,6 @@ If you have never generated an RSA key before, please follow these steps to make
 Both keys should be present in the sbin folder (check with: ls -al command).
 
 3.And next, use ds-addon-pack.sh and RSA key to compress add-ons and make a signature:
-./ds-addon-pack.sh private.pem public.pem addons/<torrent foldername>
+./ds-addon-pack.sh private.pem public.pem addons/[torrent foldername]
 
-This will generate a package "<torrent foldername><version-timestamp>.addon" in the sbin folder.
+This will generate a package "[torrent foldername][version-timestamp].addon" in the sbin folder.
