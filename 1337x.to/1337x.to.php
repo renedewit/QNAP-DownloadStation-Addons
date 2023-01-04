@@ -141,21 +141,22 @@ class class1337x implements ISite, ISearch {
 			$tlink->size          = ($matches["size"][$i] + 0) * class1337x::UnitSize($matches["unit"][$i]);
 			
 			$tlink->time = new DateTime();
-            $time = preg_replace("/'/", "20", $matches["time"][$i]);
+			$time = $matches["time"][$i];
 			$time = preg_replace("/&nbsp;/", " ", $time);
 			$time = preg_replace("/ /", "_", $time);
 			$time = explode("_", strip_tags($time));
-			// example				na explode	strpos(":")
-			// 6:12am				1			numeric
-			// 12:40am Jan. 1st		3			numeric
-			// Dec. 31st '22		3			false
+			// example				na explode	strpos("'")
+			// 6:12am				1			false
+			// 12am Jan. 1st		3			false
+			// Dec. 31st '22		3			numeric
 						
-			if (count($time) == 1 && strpos($time[0], ":") > 0) {								// e.g. 6:12am
+			if (count($time) == 1 && !strpos($time[0], "'")) {									// e.g. 6:12am
 				$tlink->time = DateTime::createFromFormat("h:ia", $time[0]);
-			} else if (count($time) == 3 && strpos($time[0], ":") > 0) {						// e.g. 12:40am Jan. 1st
-				$tlink->time = DateTime::createFromFormat("h:ia M. dS", "$time[0] $time[1] $time[2]");
-			} else if (count($time) == 3 && !strpos("$time[0] $time[1] $time[2]", ":")) {		// e.g. 12-20 15:45
-				$tlink->time = DateTime::createFromFormat("M. dS Y", "$time[0] $time[1] $time[2]");
+			} else if (count($time) == 3 && !strpos("$time[0] $time[1] $time[2]", "'")) {		// e.g. 12am Jan. 1st
+				$tlink->time = DateTime::createFromFormat("ha M. dS", "$time[0] $time[1] $time[2]");
+			} else if (count($time) == 3 && strpos("$time[0] $time[1] $time[2]", "'") > 0) {	// e.g. Dec. 31st '22
+				$time[2] = preg_replace("/\'/", "", $time[2]);
+				$tlink->time = DateTime::createFromFormat("M. dS y", "$time[0] $time[1] $time[2]");
 			} else {																			// other formats
 				$tlink->time = Null;
 			}										
