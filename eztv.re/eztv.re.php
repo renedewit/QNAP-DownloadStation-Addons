@@ -50,7 +50,7 @@ class eztv implements ISite, ISearch {
         
         $ajax = new Ajax();
         $found = array();
-        $success = function ($_, $_, $_, $body, $url) use(&$page, &$found, &$limit) {
+        $success = function ($ignore1, $ignore2, $ignore3, $body, $url) use(&$page, &$found, &$limit) {
             preg_match_all(
                 "`".
                     "<tr .*name=\"hover\" class=\"forum_header_border\">.*".
